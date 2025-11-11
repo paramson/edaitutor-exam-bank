@@ -6,17 +6,16 @@
   <title>EDAI Tutor Exam Generator</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    body { background-color: #f7f8fc; font-family: 'Segoe UI', sans-serif; }
-    .exam-container { max-width: 900px; margin: 40px auto; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
-    .question-card { background: #fff; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
-    .btn-check-answer { background-color: #0d6efd; color: white; margin-top: 10px; }
-    .btn-check-answer:hover { background-color: #084298; }
-    .answer { margin-top: 10px; font-style: italic; }
-    .load-more-container { text-align: center; margin-top: 30px; }
-    .back-link { display: block; text-align: center; margin-top: 40px; font-size: 0.9rem; }
+    body { background-color:#f7f8fc; font-family:'Segoe UI',sans-serif; }
+    .exam-container { max-width:900px; margin:40px auto; padding:20px; background:white; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.08);}
+    .question-card { background:#fff; border-radius:10px; padding:20px; margin-bottom:20px; box-shadow:0 2px 6px rgba(0,0,0,0.05);}
+    .btn-check-answer { background-color:#0d6efd; color:white; margin-top:10px;}
+    .btn-check-answer:hover { background-color:#084298;}
+    .answer { margin-top:10px; font-style:italic;}
+    .load-more-container { text-align:center; margin-top:30px;}
+    .back-link { display:block; text-align:center; margin-top:40px; font-size:0.9rem;}
   </style>
 </head>
-
 <body>
   <div class="exam-container">
     <h2 class="text-center fw-bold mb-2">EDAI Tutor Exam Generator</h2>
@@ -36,60 +35,63 @@
   <script>
     const QUESTIONS_URL = "https://raw.githubusercontent.com/paramson/edaitutor-exam-bank/main/questions_bank.json";
     let allQuestions = [];
-    let filtered = [];
     let offset = 0;
     const batchSize = 20;
 
     async function fetchQuestions() {
       try {
-        const response = await fetch(QUESTIONS_URL);
-        const data = await response.json();
-        // Only include MCQs
-        allQuestions = data.filter(q => q.format && q.format.toLowerCase().includes("mcq"));
+        const res = await fetch(QUESTIONS_URL);
+        const data = await res.json();
 
-        filtered = allQuestions.sort(() => Math.random() - 0.5);
+        // ✅ Only questions with options (ignore SAQs)
+        allQuestions = data.filter(q => Array.isArray(q.options) && q.options.length > 0);
+
+        // Shuffle for randomness
+        allQuestions.sort(() => Math.random() - 0.5);
+
         renderNextBatch();
       } catch (err) {
         document.getElementById("questions-container").innerHTML =
-          "<p class='text-danger text-center'>⚠️ Failed to load questions. Please check JSON file path.</p>";
+          "<p class='text-danger text-center'>⚠️ Failed to load questions. Please check your JSON path.</p>";
+        console.error(err);
       }
     }
 
     function renderNextBatch() {
       const container = document.getElementById("questions-container");
-      const batch = filtered.slice(offset, offset + batchSize);
+      const batch = allQuestions.slice(offset, offset + batchSize);
+
       if (batch.length === 0) {
         document.getElementById("loadMore").style.display = "none";
         return;
       }
 
       batch.forEach((q, i) => {
-        const qNumber = offset + i + 1;
-        const optionsHTML = q.options.map((opt, idx) => `
+        const num = offset + i + 1;
+        const opts = q.options.map((opt, idx) => `
           <div>
-            <input type="radio" name="q${qNumber}" value="${idx}" id="q${qNumber}_${idx}">
-            <label for="q${qNumber}_${idx}">${opt}</label>
+            <input type="radio" name="q${num}" value="${idx}" id="q${num}_${idx}">
+            <label for="q${num}_${idx}">${opt}</label>
           </div>
         `).join('');
 
-        const questionHTML = `
+        container.insertAdjacentHTML('beforeend', `
           <div class="question-card">
-            <h5>Q${qNumber}. ${q.stem}</h5>
-            ${optionsHTML}
-            <button class="btn btn-sm btn-check-answer" onclick="checkAnswer(${qNumber}, ${q.answer_index})">Check</button>
-            <div id="answer_${qNumber}" class="answer text-success"></div>
+            <h5>Q${num}. ${q.stem}</h5>
+            ${opts}
+            <button class="btn btn-sm btn-check-answer" onclick="checkAnswer(${num}, ${q.answer_index})">Check</button>
+            <div id="answer_${num}" class="answer text-success"></div>
           </div>
-        `;
-        container.insertAdjacentHTML('beforeend', questionHTML);
+        `);
       });
 
       offset += batchSize;
-      if (offset >= filtered.length) document.getElementById("loadMore").style.display = "none";
+      if (offset >= allQuestions.length) document.getElementById("loadMore").style.display = "none";
     }
 
-    function checkAnswer(qIndex, correctIndex) {
-      const selected = document.querySelector(`input[name="q${qIndex}"]:checked`);
-      const answerDiv = document.getElementById(`answer_${qIndex}`);
+    function checkAnswer(num, correctIndex) {
+      const selected = document.querySelector(`input[name="q${num}"]:checked`);
+      const answerDiv = document.getElementById(`answer_${num}`);
       if (!selected) {
         answerDiv.textContent = "Please select an option first.";
         answerDiv.classList.add("text-danger");
