@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EDAITutor Exam Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      background: #f4f4f9;
+      color: #222;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+    .card {
+      background: white;
+      padding: 1rem 1.5rem;
+      margin: 1rem 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    button {
+      background: #0073aa;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      margin-top: 0.5rem;
+      cursor: pointer;
+    }
+    button:hover { background: #005c88; }
+    .result {
+      margin-top: 0.5rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>EDAI Tutor Exam Generator</h2>
+  <div class="subtitle">ACEM / RCEM / RNZCUC / Associateship Mock Exam Practice</div>
+
+  <div id="exam"></div>
+
+  <script>
+    async function loadExam() {
+      const response = await fetch("https://cdn.jsdelivr.net/gh/paramson/edaitutor-exam-bank@main/questions_bank.json");
+      const data = await response.json();
+
+      const container = document.getElementById('exam');
+      container.innerHTML = "";
+
+      data.forEach((q, i) => {
+        const card = document.createElement('div');
+        card.className = "card";
+
+        card.innerHTML = `
+          <strong>Q${i + 1}. ${q.stem}</strong><br><br>
+          ${q.options.map((opt, j) => `
+            <label style="display:block;margin-bottom:0.3rem;">
+              <input type="radio" name="q${i}" value="${j}"> ${opt}
+            </label>
+          `).join('')}
+          <button onclick="checkAnswer(${i}, ${q.answer_index})">Check</button>
+          <p id="res${i}" class="result"></p>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    function checkAnswer(i, ans) {
+      const options = document.getElementsByName(`q${i}`);
+      let selected = -1;
+      options.forEach(r => { if (r.checked) selected = parseInt(r.value); });
+
+      const result = document.getElementById(`res${i}`);
+      if (selected === -1) {
+        result.innerHTML = "⚠️ Please select an answer.";
+        result.style.color = "#b36b00";
+      } else if (selected === ans) {
+        result.innerHTML = "✅ Correct!";
+        result.style.color = "green";
+      } else {
+        result.innerHTML = "❌ Incorrect. Review and try again.";
+        result.style.color = "red";
+      }
+    }
+
+    loadExam();
+  </script>
+</body>
+</html>
