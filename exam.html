@@ -14,6 +14,7 @@
     .answer { margin-top:10px; font-style:italic; }
     .explanation-box { background:#eef6ff; border-left:4px solid #0d6efd; padding:10px 15px; margin-top:10px; border-radius:6px; display:none; }
     .ref-link { display:block; margin-top:3px; }
+    #loading-spinner { text-align:center; margin-top:40px; font-weight:500; color:#555; }
   </style>
 </head>
 
@@ -21,16 +22,17 @@
   <div class="exam-container">
     <h2 class="text-center fw-bold mb-2">EDAI Tutor Exam Generator</h2>
     <p class="text-center text-muted mb-4">ACEM / RCEM / RNZCUC / Associateship Mock Exam Practice</p>
+    <div id="loading-spinner">⏳ Loading questions, please wait...</div>
     <div id="load-error" class="text-danger mb-3" style="display:none;"></div>
-    <div id="questions-list"></div>
+    <div id="questions-list" style="display:none;"></div>
     <div class="text-center">
       <button id="load-more" class="btn btn-primary" style="display:none;">Load 20 More Questions</button>
     </div>
   </div>
 
 <script>
-const QUESTIONS_URL = 'questions_bank.json';
-const EXPLANATIONS_URL = 'explanations_bank.json';
+const QUESTIONS_URL = 'https://paramson.github.io/edaitutor-exam-bank/questions_bank.json';
+const EXPLANATIONS_URL = 'https://paramson.github.io/edaitutor-exam-bank/explanations_bank.json';
 
 let allQuestions = [];
 let explanations = {};
@@ -40,16 +42,26 @@ const PAGE_SIZE = 20;
 async function loadBanks() {
   try {
     const [qRes, eRes] = await Promise.all([
-      fetch(QUESTIONS_URL, { cache:'no-store' }),
-      fetch(EXPLANATIONS_URL, { cache:'no-store' })
+      fetch(QUESTIONS_URL, { cache: 'no-store' }),
+      fetch(EXPLANATIONS_URL, { cache: 'no-store' })
     ]);
-    if (!qRes.ok || !eRes.ok) throw new Error('fetch error');
+
+    if (!qRes.ok) throw new Error('Questions not found');
+    if (!eRes.ok) throw new Error('Explanations not found');
+
     allQuestions = await qRes.json();
     explanations = await eRes.json();
+
+    if (!Array.isArray(allQuestions)) throw new Error('Invalid questions format');
+    if (typeof explanations !== 'object') throw new Error('Invalid explanations format');
+
+    document.getElementById('loading-spinner').style.display = 'none';
     document.getElementById('load-error').style.display = 'none';
+    document.getElementById('questions-list').style.display = 'block';
     renderNextPage(true);
   } catch (err) {
-    console.error(err);
+    console.error('❌ JSON load failed:', err);
+    document.getElementById('loading-spinner').style.display = 'none';
     const errBox = document.getElementById('load-error');
     errBox.textContent = 'Failed to load questions or explanations. Please check file paths.';
     errBox.style.display = 'block';
@@ -122,6 +134,7 @@ loadBanks();
 </script>
 </body>
 </html>
+
 
 
 
