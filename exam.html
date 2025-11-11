@@ -4,136 +4,160 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EDAI Tutor Exam Generator</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    body { background-color:#f7f8fc; font-family:'Segoe UI',sans-serif; }
-    .exam-container { max-width:900px; margin:40px auto; padding:20px; background:#fff; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.08); }
-    .question-card { background:#fff; border-radius:10px; padding:20px; margin-bottom:20px; box-shadow:0 2px 6px rgba(0,0,0,0.05); }
-    .btn-check-answer { background-color:#0d6efd; color:white; margin-top:10px; }
-    .btn-check-answer:hover { background-color:#084298; }
-    .answer { margin-top:10px; font-style:italic; }
-    .explanation-box { background:#eef6ff; border-left:4px solid #0d6efd; padding:10px 15px; margin-top:10px; border-radius:6px; display:none; }
-    .ref-link { display:block; margin-top:3px; }
-    #loading-spinner { text-align:center; margin-top:40px; font-weight:500; color:#555; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #1d3557;
+    }
+    h2 {
+      text-align: center;
+      color: #457b9d;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    .question {
+      margin-bottom: 25px;
+      padding: 15px;
+      border-radius: 10px;
+      background: #f9f9f9;
+      border: 1px solid #dee2e6;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .correct { color: green; font-weight: bold; }
+    .incorrect { color: red; font-weight: bold; }
+    .explanation {
+      background: #e9f7ef;
+      border-left: 4px solid #28a745;
+      padding: 8px 12px;
+      margin-top: 8px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
+    .load-more {
+      display: block;
+      margin: 20px auto;
+      background-color: #1d3557;
+    }
   </style>
 </head>
-
 <body>
-  <div class="exam-container">
-    <h2 class="text-center fw-bold mb-2">EDAI Tutor Exam Generator</h2>
-    <p class="text-center text-muted mb-4">ACEM / RCEM / RNZCUC / Associateship Mock Exam Practice</p>
-    <div id="loading-spinner">⏳ Loading questions, please wait...</div>
-    <div id="load-error" class="text-danger mb-3" style="display:none;"></div>
-    <div id="questions-list" style="display:none;"></div>
-    <div class="text-center">
-      <button id="load-more" class="btn btn-primary" style="display:none;">Load 20 More Questions</button>
-    </div>
+  <div class="container">
+    <h1>EDAI Tutor Exam Generator</h1>
+    <h2>ACEM / RCEM / RNZCUC / Associateship Mock Exam Practice</h2>
+    <div id="questions"></div>
+    <button id="loadMore" class="load-more">Load 20 More Questions</button>
   </div>
 
-<script>
-const QUESTIONS_URL = 'https://paramson.github.io/edaitutor-exam-bank/questions_bank.json';
-const EXPLANATIONS_URL = 'https://paramson.github.io/edaitutor-exam-bank/explanations_bank.json';
+  <script>
+    const questionURL = "https://paramson.github.io/edaitutor-exam-bank/questions_bank.json";
+    const explanationURL = "https://paramson.github.io/edaitutor-exam-bank/explanations_bank.json";
+    let questions = [];
+    let explanations = {};
+    let currentIndex = 0;
+    const batchSize = 20;
 
-let allQuestions = [];
-let explanations = {};
-let rendered = 0;
-const PAGE_SIZE = 20;
+    async function loadQuestions() {
+      try {
+        const [qRes, eRes] = await Promise.all([
+          fetch(questionURL),
+          fetch(explanationURL)
+        ]);
 
-async function loadBanks() {
-  try {
-    const [qRes, eRes] = await Promise.all([
-      fetch(QUESTIONS_URL, { cache: 'no-store' }),
-      fetch(EXPLANATIONS_URL, { cache: 'no-store' })
-    ]);
+        if (!qRes.ok || !eRes.ok) throw new Error("File fetch error");
 
-    if (!qRes.ok) throw new Error('Questions not found');
-    if (!eRes.ok) throw new Error('Explanations not found');
+        questions = await qRes.json();
+        explanations = await eRes.json();
+        renderNextBatch();
+      } catch (err) {
+        document.getElementById("questions").innerHTML = 
+          `<p style="color:red;">Failed to load questions or explanations. Please check file paths.</p>`;
+        console.error(err);
+      }
+    }
 
-    allQuestions = await qRes.json();
-    explanations = await eRes.json();
+    function renderNextBatch() {
+      const container = document.getElementById("questions");
+      const nextBatch = questions.slice(currentIndex, currentIndex + batchSize);
+      nextBatch.forEach((q, i) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "question";
+        qDiv.innerHTML = `
+          <p><b>Q${currentIndex + i + 1}. ${q.stem}</b></p>
+          ${q.options.map((opt, j) => `
+            <label><input type="radio" name="${q.id}" value="${j}"> ${opt}</label><br>
+          `).join("")}
+          <button onclick="checkAnswer('${q.id}', ${q.answer_index})">Check</button>
+          <div id="exp-${q.id}" class="explanation" style="display:none;"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      currentIndex += nextBatch.length;
+    }
 
-    if (!Array.isArray(allQuestions)) throw new Error('Invalid questions format');
-    if (typeof explanations !== 'object') throw new Error('Invalid explanations format');
+    function checkAnswer(id, correctIndex) {
+      const radios = document.querySelectorAll(`input[name="${id}"]`);
+      let selectedIndex = -1;
+      radios.forEach((r, i) => { if (r.checked) selectedIndex = i; });
+      const expDiv = document.getElementById(`exp-${id}`);
 
-    document.getElementById('loading-spinner').style.display = 'none';
-    document.getElementById('load-error').style.display = 'none';
-    document.getElementById('questions-list').style.display = 'block';
-    renderNextPage(true);
-  } catch (err) {
-    console.error('❌ JSON load failed:', err);
-    document.getElementById('loading-spinner').style.display = 'none';
-    const errBox = document.getElementById('load-error');
-    errBox.textContent = 'Failed to load questions or explanations. Please check file paths.';
-    errBox.style.display = 'block';
-  }
-}
+      if (selectedIndex === -1) {
+        expDiv.style.display = "block";
+        expDiv.innerHTML = "<span class='incorrect'>Please select an answer.</span>";
+        return;
+      }
 
-function renderNextPage(reset=false) {
-  const list = document.getElementById('questions-list');
-  if (reset) { list.innerHTML=''; rendered=0; }
-  const slice = allQuestions.slice(rendered, rendered+PAGE_SIZE);
-  slice.forEach((q,i)=>list.appendChild(renderQuestionCard(q,rendered+i+1)));
-  rendered += slice.length;
-  document.getElementById('load-more').style.display = (rendered < allQuestions.length) ? 'inline-block' : 'none';
-}
+      const result = selectedIndex === correctIndex ? 
+        "<span class='correct'>✅ Correct!</span>" : 
+        "<span class='incorrect'>❌ Incorrect.</span>";
 
-function renderQuestionCard(q, num) {
-  const card = document.createElement('div');
-  card.className='question-card';
-  const title=document.createElement('h5');
-  title.textContent=`Q${num}. ${q.stem}`;
-  card.appendChild(title);
+      const expData = explanations[id];
+      const expText = expData ? 
+        `${expData.text}<br><b>References:</b><br>${expData.sources.map(s => `<a href="${s.url}" target="_blank">${s.title}</a>`).join("<br>")}` :
+        "Explanation not available.";
 
-  q.options.forEach((opt,idx)=>{
-    const lbl=document.createElement('label');
-    lbl.style.display='block';
-    lbl.innerHTML=`<input type="radio" name="q${num}" value="${idx}"> ${opt}`;
-    card.appendChild(lbl);
-  });
+      expDiv.style.display = "block";
+      expDiv.innerHTML = `${result}<br>${expText}`;
+    }
 
-  const btn=document.createElement('button');
-  btn.className='btn btn-sm btn-check-answer';
-  btn.textContent='Check';
-  btn.onclick=()=>checkAnswer(num,q);
-  card.appendChild(btn);
-
-  const ans=document.createElement('div');
-  ans.id=`ans${num}`;
-  ans.className='answer';
-  card.appendChild(ans);
-
-  const exp=document.createElement('div');
-  exp.id=`exp${num}`;
-  exp.className='explanation-box';
-  card.appendChild(exp);
-  return card;
-}
-
-function checkAnswer(num,q){
-  const sel=document.querySelector(`input[name="q${num}"]:checked`);
-  const ans=document.getElementById(`ans${num}`);
-  const exp=document.getElementById(`exp${num}`);
-  if(!sel){ ans.textContent='Select an option first.'; ans.classList.add('text-danger'); return;}
-  const chosen=parseInt(sel.value);
-  const correct=chosen===q.answer_index;
-  ans.textContent=correct?'✅ Correct!':'❌ Incorrect.';
-  ans.className=correct?'answer text-success':'answer text-danger';
-  const expData=explanations[q.id];
-  if(expData){
-    let refs='';
-    expData.sources.forEach(r=>{
-      refs+=r.url?`<a href="${r.url}" target="_blank" class="ref-link">🔗 ${r.title}</a>`:`<span class="ref-link">📘 ${r.title}</span>`;
+    document.getElementById("loadMore").addEventListener("click", () => {
+      if (currentIndex < questions.length) {
+        renderNextBatch();
+      } else {
+        alert("🎉 You’ve reached the end of the question bank!");
+      }
     });
-    exp.innerHTML=`<b>Short Explanation:</b> ${expData.text}<br><b>References:</b><br>${refs}`;
-  }else if(q.explanation){ exp.innerHTML=`<b>Explanation:</b> ${q.explanation}`; }
-  exp.style.display='block';
-}
 
-document.getElementById('load-more').addEventListener('click',()=>renderNextPage(false));
-loadBanks();
-</script>
+    loadQuestions();
+  </script>
 </body>
 </html>
+
+
 
 
 
