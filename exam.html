@@ -45,6 +45,12 @@
       text-align: center;
       margin-top: 30px;
     }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 
@@ -59,6 +65,8 @@
     <div class="load-more-container">
       <button id="loadMore" class="btn btn-primary">Load 20 More Questions</button>
     </div>
+
+    <a href="index.html" class="back-link text-decoration-none text-primary">← Back to Exam Bank</a>
   </div>
 
   <script>
@@ -66,7 +74,7 @@
     const domainFilter = urlParams.get('domain') || 'All';
     const difficultyFilter = urlParams.get('difficulty') || 'All';
 
-    // ✅ Fixed working GitHub RAW JSON link
+    // ✅ Fetch directly from RAW GitHub (works 100%)
     const QUESTIONS_URL = "https://raw.githubusercontent.com/paramson/edaitutor-exam-bank/refs/heads/main/questions_bank.json";
 
     let allQuestions = [];
@@ -81,13 +89,13 @@
         allQuestions = data;
         filtered = allQuestions.filter(q =>
           (domainFilter === 'All' || q.domain === domainFilter) &&
-          (difficultyFilter === 'All' || q.difficulty === difficultyFilter)
+          (difficultyFilter === 'All' || q.difficulty.toLowerCase() === difficultyFilter.toLowerCase())
         );
         renderNextBatch();
       } catch (err) {
         console.error("Error loading questions:", err);
         document.getElementById("questions-container").innerHTML =
-          "<p class='text-danger text-center'>⚠️ Failed to load questions. Please check your connection or data file.</p>";
+          "<p class='text-danger text-center'>⚠️ Failed to load questions. Please check your connection or JSON file path.</p>";
       }
     }
 
