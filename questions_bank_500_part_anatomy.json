@@ -1,379 +1,1190 @@
 [
   {
-    "id": "acem_prim_anat_0001",
+    "id": "acem_prim_anat_0101",
     "exam": "ACEM Primary",
     "domain": "Anatomy",
-    "topic": "Upper Limb Nerve Injury",
+    "topic": "Upper Limb – Nerve",
     "format": "MCQ_SBA",
     "difficulty": "applied",
-    "stem": "A spiral fracture of the humeral shaft most commonly injures which structure?",
-    "options": ["Radial nerve", "Median nerve", "Ulnar nerve", "Axillary nerve"],
-    "answer_index": 0
+    "stem": "A fracture at the surgical neck of the humerus is most likely to injure which nerve?",
+    "options": [
+      "Radial",
+      "Axillary",
+      "Musculocutaneous",
+      "Ulnar"
+    ],
+    "answer_index": 1,
+    "explanation": "The axillary nerve winds around the surgical neck with the posterior circumflex humeral artery.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Shoulder region"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Shoulder region"
+      }
+    ]
   },
   {
-    "id": "acem_prim_anat_0002",
+    "id": "acem_prim_anat_0102",
     "exam": "ACEM Primary",
     "domain": "Anatomy",
-    "topic": "Brachial Plexus",
-    "format": "MCQ_SBA",
-    "difficulty": "basic",
-    "stem": "Which nerve root combination forms the median nerve?",
-    "options": ["C5–C6", "C5–C7", "C5–T1", "C8–T1"],
-    "answer_index": 2
-  },
-  {
-    "id": "acem_prim_anat_0003",
-    "exam": "ACEM Primary",
-    "domain": "Anatomy",
-    "topic": "Cranial Nerves",
-    "format": "MCQ_SBA",
-    "difficulty": "basic",
-    "stem": "Which cranial nerve exits via the superior orbital fissure?",
-    "options": ["Optic", "Oculomotor", "Facial", "Glossopharyngeal"],
-    "answer_index": 1
-  },
-  {
-    "id": "acem_prim_anat_0004",
-    "exam": "ACEM Primary",
-    "domain": "Anatomy",
-    "topic": "Lower Limb",
+    "topic": "Upper Limb – Nerve",
     "format": "MCQ_SBA",
     "difficulty": "applied",
-    "stem": "Damage to the common peroneal nerve results in which deficit?",
-    "options": ["Foot drop", "Knee extension loss", "Hip flexion loss", "Plantarflexion weakness"],
-    "answer_index": 0
+    "stem": "Wrist drop following a humeral shaft fracture indicates injury to which structure?",
+    "options": [
+      "Radial nerve in spiral groove",
+      "Median nerve at elbow",
+      "Ulnar nerve in cubital tunnel",
+      "Posterior interosseous artery"
+    ],
+    "answer_index": 0,
+    "explanation": "The radial nerve in the radial (spiral) groove is vulnerable in mid‑shaft fractures, leading to wrist/finger extensor weakness.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Arm"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Arm"
+      }
+    ]
   },
   {
-    "id": "acem_prim_anat_0005",
+    "id": "acem_prim_anat_0103",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Upper Limb – Spaces",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "Tenderness in the anatomical snuffbox after a fall on the outstretched hand points to which fracture?",
+    "options": [
+      "Lunate",
+      "Scaphoid",
+      "Trapezium",
+      "Capitate"
+    ],
+    "answer_index": 1,
+    "explanation": "Scaphoid fracture classically presents with snuffbox tenderness; retrograde blood supply risks avascular necrosis.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Wrist/hand"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Wrist/hand"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0104",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Upper Limb – Muscle",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "Which muscle initiates the first 15° of shoulder abduction?",
+    "options": [
+      "Deltoid",
+      "Supraspinatus",
+      "Infraspinatus",
+      "Teres minor"
+    ],
+    "answer_index": 1,
+    "explanation": "Supraspinatus (suprascapular nerve) initiates abduction; deltoid (axillary) continues beyond ~15°.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Rotator cuff"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Rotator cuff"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0105",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Upper Limb – Nerve",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "Damage to which nerve causes loss of thumb opposition (ape hand)?",
+    "options": [
+      "Median nerve recurrent branch",
+      "Ulnar nerve deep branch",
+      "Radial nerve superficial branch",
+      "Posterior interosseous nerve"
+    ],
+    "answer_index": 0,
+    "explanation": "The recurrent motor branch of the median nerve supplies thenar muscles responsible for opposition.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Hand – thenar compartment"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Hand – thenar compartment"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0106",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Upper Limb – Vessels",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "The deep palmar arch is primarily formed by which artery?",
+    "options": [
+      "Radial",
+      "Ulnar",
+      "Anterior interosseous",
+      "Superficial palmar branch of radial"
+    ],
+    "answer_index": 0,
+    "explanation": "Deep palmar arch: mainly radial with ulnar contribution; superficial arch is mainly ulnar.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Hand vasculature"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Hand vasculature"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0107",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Upper Limb – Nerve",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "Injury to the ulnar nerve at the elbow most prominently weakens which movement?",
+    "options": [
+      "Thumb opposition",
+      "Wrist extension",
+      "Finger abduction",
+      "Forearm supination"
+    ],
+    "answer_index": 2,
+    "explanation": "Ulnar nerve innervates interossei for finger ab/adduction; injury causes weak abduction/adduction.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Forearm/hand"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Forearm/hand"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0108",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Upper Limb – Joints",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "The most commonly dislocated carpal bone is:",
+    "options": [
+      "Lunate",
+      "Scaphoid",
+      "Triquetrum",
+      "Pisiform"
+    ],
+    "answer_index": 0,
+    "explanation": "Lunate is most commonly dislocated; scaphoid is most commonly fractured.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Wrist/hand"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Wrist/hand"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0109",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Lower Limb – Nerve",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "Foot drop following fibular neck injury is due to damage of:",
+    "options": [
+      "Tibial nerve",
+      "Common peroneal (fibular) nerve",
+      "Saphenous nerve",
+      "Obturator nerve"
+    ],
+    "answer_index": 1,
+    "explanation": "The common peroneal winds around the fibular neck and supplies dorsiflexors via deep peroneal branch.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Knee/leg"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Knee/leg"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0110",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Lower Limb – Surface anatomy",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "A femoral nerve block is most accurately placed at which landmark?",
+    "options": [
+      "Mid‑inguinal point lateral to femoral artery",
+      "Medial to femoral vein at inguinal ligament",
+      "Halfway between ASIS and pubic tubercle",
+      "Over the femoral head"
+    ],
+    "answer_index": 0,
+    "explanation": "Femoral nerve lies lateral to femoral artery under the inguinal ligament at the mid‑inguinal point.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Groin – femoral triangle"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Groin – femoral triangle"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0111",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Lower Limb – Vessels",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "The dorsalis pedis artery is a continuation of which vessel?",
+    "options": [
+      "Posterior tibial",
+      "Peroneal (fibular)",
+      "Anterior tibial",
+      "Popliteal"
+    ],
+    "answer_index": 2,
+    "explanation": "Anterior tibial becomes dorsalis pedis distal to the ankle joint.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Foot vessels"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Foot vessels"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0112",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Lower Limb – Ligaments",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "Which ligament most resists anterior translation of the tibia on the femur?",
+    "options": [
+      "ACL",
+      "PCL",
+      "MCL",
+      "LCL"
+    ],
+    "answer_index": 0,
+    "explanation": "ACL prevents anterior tibial translation and resists rotational forces.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Knee joint"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Knee joint"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0113",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Lower Limb – Muscle",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "Which muscle is primarily responsible for hip abduction during gait (Trendelenburg sign when weak)?",
+    "options": [
+      "Gluteus maximus",
+      "Gluteus medius",
+      "Piriformis",
+      "Adductor magnus"
+    ],
+    "answer_index": 1,
+    "explanation": "Gluteus medius (and minimus) stabilize pelvis during stance; superior gluteal nerve.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Gluteal region"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Gluteal region"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0114",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Lower Limb – Nerve",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "Sensory loss in the first web space indicates lesion of which nerve?",
+    "options": [
+      "Sural",
+      "Superficial peroneal",
+      "Deep peroneal",
+      "Saphenous"
+    ],
+    "answer_index": 2,
+    "explanation": "Deep peroneal nerve supplies the first dorsal web space.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Foot innervation"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Foot innervation"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0115",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Lower Limb – Bones",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "A fracture of the neck of the talus risks avascular necrosis due to disruption of which vessel pattern?",
+    "options": [
+      "Retrograde blood supply to the body",
+      "Nutrient artery to the head",
+      "Perforators from plantar arch",
+      "Artery to the sinus tarsi only"
+    ],
+    "answer_index": 0,
+    "explanation": "The talar body has retrograde intraosseous flow; neck fractures compromise body perfusion.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Ankle/foot"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Ankle/foot"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0116",
     "exam": "ACEM Primary",
     "domain": "Anatomy",
     "topic": "Thorax",
     "format": "MCQ_SBA",
     "difficulty": "applied",
-    "stem": "At which level does the trachea bifurcate?",
-    "options": ["T2", "T4–T5", "T6", "T8"],
-    "answer_index": 1
+    "stem": "At which vertebral level does the trachea bifurcate in adults at end‑expiration?",
+    "options": [
+      "T2",
+      "T4–T5 (sternal angle)",
+      "T6",
+      "T8"
+    ],
+    "answer_index": 1,
+    "explanation": "The carina lies at the sternal angle corresponding to the T4–T5 intervertebral level.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Thorax – mediastinum"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Thorax – mediastinum"
+      }
+    ]
   },
   {
-    "id": "acem_prim_anat_0045",
+    "id": "acem_prim_anat_0117",
     "exam": "ACEM Primary",
     "domain": "Anatomy",
-    "topic": "Lower Limb Compartments",
-    "format": "MCQ_SBA",
-    "difficulty": "basic",
-    "stem": "Which muscle is located in the anterior compartment of the leg?",
-    "options": ["Tibialis anterior", "Peroneus longus", "Gastrocnemius", "Flexor hallucis longus"],
-    "answer_index": 0
-  },
-  {
-    "id": "acem_prim_anat_0046",
-    "exam": "ACEM Primary",
-    "domain": "Anatomy",
-    "topic": "Lower Limb Compartments",
-    "format": "MCQ_SBA",
-    "difficulty": "applied",
-    "stem": "Compression of the deep peroneal nerve causes weakness of which movement?",
-    "options": ["Plantarflexion", "Eversion", "Dorsiflexion", "Knee extension"],
-    "answer_index": 2
-  },
-  {
-    "id": "acem_prim_anat_0047",
-    "exam": "ACEM Primary",
-    "domain": "Anatomy",
-    "topic": "Lower Limb Compartments",
+    "topic": "Thorax",
     "format": "MCQ_SBA",
     "difficulty": "applied",
-    "stem": "The tibial nerve supplies which compartment of the leg?",
-    "options": ["Anterior", "Lateral", "Posterior", "Medial"],
-    "answer_index": 2
+    "stem": "Which coronary artery most commonly supplies the AV node (right‑dominant circulation)?",
+    "options": [
+      "Left anterior descending",
+      "Left circumflex",
+      "Right coronary artery",
+      "Posterior descending from LAD"
+    ],
+    "answer_index": 2,
+    "explanation": "In ~85% (right dominance) the AV nodal artery arises from the RCA at the crux.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Heart – coronary circulation"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Heart – coronary circulation"
+      }
+    ]
   },
   {
-    "id": "acem_prim_anat_0048",
+    "id": "acem_prim_anat_0118",
     "exam": "ACEM Primary",
     "domain": "Anatomy",
-    "topic": "Lower Limb Dermatomes",
-    "format": "MCQ_SBA",
-    "difficulty": "basic",
-    "stem": "The dermatome over the great toe corresponds to which spinal level?",
-    "options": ["L3", "L4", "L5", "S1"],
-    "answer_index": 2
-  },
-  {
-    "id": "acem_prim_anat_0049",
-    "exam": "ACEM Primary",
-    "domain": "Anatomy",
-    "topic": "Lower Limb Dermatomes",
-    "format": "MCQ_SBA",
-    "difficulty": "basic",
-    "stem": "The heel is supplied by which dermatome?",
-    "options": ["L4", "L5", "S1", "S2"],
-    "answer_index": 3
-  },
-  {
-    "id": "acem_prim_anat_0050",
-    "exam": "ACEM Primary",
-    "domain": "Anatomy",
-    "topic": "Lower Limb Clinical",
+    "topic": "Thorax",
     "format": "MCQ_SBA",
     "difficulty": "applied",
-    "stem": "Injury to the superior gluteal nerve causes weakness of which movement?",
-    "options": ["Thigh flexion", "Thigh adduction", "Hip abduction", "Knee flexion"],
-    "answer_index": 2
+    "stem": "The right main bronchus is more prone to aspiration because it is:",
+    "options": [
+      "Narrower, longer, more vertical",
+      "Wider, shorter, more vertical",
+      "Wider, longer, more horizontal",
+      "Narrower, shorter, more horizontal"
+    ],
+    "answer_index": 1,
+    "explanation": "Right main bronchus is wider, shorter, and more vertical.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Lungs/bronchi"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Lungs/bronchi"
+      }
+    ]
   },
   {
-    "id": "acem_prim_anat_0051",
+    "id": "acem_prim_anat_0119",
     "exam": "ACEM Primary",
     "domain": "Anatomy",
-    "topic": "Lower Limb Clinical",
+    "topic": "Abdomen",
     "format": "MCQ_SBA",
     "difficulty": "applied",
-    "stem": "A positive Trendelenburg sign indicates dysfunction of which muscle group?",
-    "options": ["Gluteus medius/minimus", "Adductors", "Quadriceps", "Hamstrings"],
-    "answer_index": 0
+    "stem": "Pain from the foregut is typically referred to which region?",
+    "options": [
+      "Periumbilical",
+      "Epigastric",
+      "Suprapubic",
+      "Right iliac fossa"
+    ],
+    "answer_index": 1,
+    "explanation": "Foregut visceral pain localizes to the epigastrium; midgut to umbilical; hindgut to suprapubic.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Abdominal viscera"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Abdominal viscera"
+      }
+    ]
   },
   {
-    "id": "acem_prim_anat_0052",
+    "id": "acem_prim_anat_0120",
     "exam": "ACEM Primary",
     "domain": "Anatomy",
-    "topic": "Lower Limb Clinical",
-    "format": "MCQ_SBA",
-    "difficulty": "basic",
-    "stem": "Which structure passes through the adductor hiatus?",
-    "options": ["Femoral artery", "Femoral vein", "Popliteal artery", "Saphenous vein"],
-    "answer_index": 2
-  },
-  {
-    "id": "acem_prim_anat_0053",
-    "exam": "ACEM Primary",
-    "domain": "Anatomy",
-    "topic": "Lower Limb Joints",
-    "format": "MCQ_SBA",
-    "difficulty": "basic",
-    "stem": "The anterior cruciate ligament prevents which movement?",
-    "options": ["Posterior displacement of tibia", "Anterior displacement of tibia", "Medial rotation of femur", "Valgus stress"],
-    "answer_index": 1
-  },
-  {
-    "id": "acem_prim_anat_0054",
-    "exam": "ACEM Primary",
-    "domain": "Anatomy",
-    "topic": "Lower Limb Joints",
+    "topic": "Abdomen",
     "format": "MCQ_SBA",
     "difficulty": "applied",
-    "stem": "Damage to the medial meniscus commonly occurs with injury to which ligament?",
-    "options": ["Lateral collateral ligament", "Anterior cruciate ligament", "Posterior cruciate ligament", "Medial collateral ligament"],
-    "answer_index": 3
+    "stem": "The portal triad within the hepatoduodenal ligament contains:",
+    "options": [
+      "Hepatic vein, portal vein, bile duct",
+      "Portal vein, proper hepatic artery, common bile duct",
+      "Cystic artery, portal vein, bile duct",
+      "Proper hepatic artery, cystic duct, hepatic vein"
+    ],
+    "answer_index": 1,
+    "explanation": "From posterior to anterior: portal vein posterior, proper hepatic artery anteromedial, common bile duct anterolateral (variations exist).",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Hepatobiliary anatomy"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Hepatobiliary anatomy"
+      }
+    ]
   },
   {
-    "id": "acem_prim_anat_0055",
+    "id": "acem_prim_anat_0121",
     "exam": "ACEM Primary",
     "domain": "Anatomy",
-    "topic": "Lower Limb Clinical",
+    "topic": "Abdomen",
     "format": "MCQ_SBA",
     "difficulty": "applied",
-    "stem": "Which artery is most commonly injured in posterior knee dislocation?",
-    "options": ["Femoral", "Popliteal", "Anterior tibial", "Peroneal"],
-    "answer_index": 1
+    "stem": "McBurney’s point overlies which structure in typical anatomy?",
+    "options": [
+      "Gallbladder fundus",
+      "Appendix base at convergence of taeniae",
+      "Ileocecal valve",
+      "Meckel’s diverticulum"
+    ],
+    "answer_index": 1,
+    "explanation": "The base of the appendix lies at the confluence of taeniae coli near McBurney’s point.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Appendix"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Appendix"
+      }
+    ]
   },
   {
-    "id": "acem_prim_anat_0056",
+    "id": "acem_prim_anat_0122",
     "exam": "ACEM Primary",
     "domain": "Anatomy",
-    "topic": "Lower Limb Compartments",
+    "topic": "Abdomen",
     "format": "MCQ_SBA",
     "difficulty": "applied",
-    "stem": "Which nerve is most at risk in a fibular neck fracture?",
-    "options": ["Tibial", "Common peroneal", "Sural", "Saphenous"],
-    "answer_index": 1
+    "stem": "Which artery is the primary source for the superior epigastric artery?",
+    "options": [
+      "Internal thoracic artery",
+      "External iliac artery",
+      "Femoral artery",
+      "Subclavian vein"
+    ],
+    "answer_index": 0,
+    "explanation": "Superior epigastric is a terminal branch of the internal thoracic artery.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Anterior abdominal wall"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Anterior abdominal wall"
+      }
+    ]
   },
   {
-    "id": "acem_prim_anat_0057",
+    "id": "acem_prim_anat_0123",
     "exam": "ACEM Primary",
     "domain": "Anatomy",
-    "topic": "Lower Limb Vessels",
-    "format": "MCQ_SBA",
-    "difficulty": "basic",
-    "stem": "The femoral artery becomes the popliteal artery at which anatomical point?",
-    "options": ["Inguinal ligament", "Adductor canal", "Adductor hiatus", "Popliteal fossa"],
-    "answer_index": 2
-  },
-  {
-    "id": "acem_prim_anat_0058",
-    "exam": "ACEM Primary",
-    "domain": "Anatomy",
-    "topic": "Lower Limb Dermatomes",
-    "format": "MCQ_SBA",
-    "difficulty": "basic",
-    "stem": "The medial aspect of the leg is supplied by which nerve?",
-    "options": ["Superficial peroneal", "Saphenous", "Tibial", "Sural"],
-    "answer_index": 1
-  },
-  {
-    "id": "acem_prim_anat_0059",
-    "exam": "ACEM Primary",
-    "domain": "Anatomy",
-    "topic": "Lower Limb Clinical",
+    "topic": "Head & Neck – Cranial Nerves",
     "format": "MCQ_SBA",
     "difficulty": "applied",
-    "stem": "A patient with L5 nerve root compression is most likely to show weakness of which action?",
-    "options": ["Knee extension", "Hip adduction", "Foot dorsiflexion", "Ankle plantarflexion"],
-    "answer_index": 2
+    "stem": "Loss of the corneal blink reflex (efferent limb) indicates dysfunction of which nerve?",
+    "options": [
+      "CN V1",
+      "CN V2",
+      "CN VII",
+      "CN III"
+    ],
+    "answer_index": 2,
+    "explanation": "Afferent is ophthalmic (V1); efferent is facial (VII) to orbicularis oculi.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Cranial nerves"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Cranial nerves"
+      }
+    ]
   },
   {
-    "id": "acem_prim_anat_0060",
+    "id": "acem_prim_anat_0124",
     "exam": "ACEM Primary",
     "domain": "Anatomy",
-    "topic": "Thorax - Heart",
-    "format": "MCQ_SBA",
-    "difficulty": "basic",
-    "stem": "The apex beat of the heart is normally located at which intercostal space in the midclavicular line?",
-    "options": ["4th", "5th", "6th", "7th"],
-    "answer_index": 1
-  },
-  {
-    "id": "acem_prim_anat_0061",
-    "exam": "ACEM Primary",
-    "domain": "Anatomy",
-    "topic": "Thorax - Heart Chambers",
-    "format": "MCQ_SBA",
-    "difficulty": "basic",
-    "stem": "Which chamber forms most of the anterior surface of the heart?",
-    "options": ["Right atrium", "Right ventricle", "Left atrium", "Left ventricle"],
-    "answer_index": 1
-  },
-  {
-    "id": "acem_prim_anat_0062",
-    "exam": "ACEM Primary",
-    "domain": "Anatomy",
-    "topic": "Thorax - Heart Valves",
+    "topic": "Head & Neck – Ear",
     "format": "MCQ_SBA",
     "difficulty": "applied",
-    "stem": "Which valve lies closest to the sternum and is best heard at the left 2nd intercostal space?",
-    "options": ["Aortic", "Pulmonary", "Mitral", "Tricuspid"],
-    "answer_index": 1
+    "stem": "Which ossicle articulates with the oval window of the vestibule?",
+    "options": [
+      "Malleus",
+      "Incus",
+      "Stapes",
+      "Hammer"
+    ],
+    "answer_index": 2,
+    "explanation": "The footplate of the stapes occupies the oval window, transmitting vibrations to the inner ear.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Middle ear"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Middle ear"
+      }
+    ]
   },
   {
-    "id": "acem_prim_anat_0063",
+    "id": "acem_prim_anat_0125",
     "exam": "ACEM Primary",
     "domain": "Anatomy",
-    "topic": "Thorax - Coronary Circulation",
+    "topic": "Neuroanatomy – Tracts",
     "format": "MCQ_SBA",
     "difficulty": "applied",
-    "stem": "The posterior descending artery most commonly arises from which vessel?",
-    "options": ["Left anterior descending artery", "Left circumflex artery", "Right coronary artery", "Marginal branch"],
-    "answer_index": 2
+    "stem": "Loss of pain and temperature contralateral to a lateral medullary lesion reflects damage to:",
+    "options": [
+      "Corticospinal tract",
+      "Medial lemniscus",
+      "Spinothalamic tract",
+      "Dorsal columns"
+    ],
+    "answer_index": 2,
+    "explanation": "The anterolateral (spinothalamic) pathway crosses early and ascends contralaterally.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Brainstem pathways"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Brainstem pathways"
+      }
+    ]
   },
   {
-    "id": "acem_prim_anat_0064",
+    "id": "acem_prim_anat_0126",
     "exam": "ACEM Primary",
     "domain": "Anatomy",
-    "topic": "Thorax - Pericardium",
-    "format": "MCQ_SBA",
-    "difficulty": "basic",
-    "stem": "The fibrous pericardium is continuous inferiorly with which structure?",
-    "options": ["Parietal pleura", "Diaphragm’s central tendon", "Mediastinal fascia", "Adventitia of great vessels"],
-    "answer_index": 1
-  },
-  {
-    "id": "acem_prim_anat_0065",
-    "exam": "ACEM Primary",
-    "domain": "Anatomy",
-    "topic": "Thorax - Diaphragm",
-    "format": "MCQ_SBA",
-    "difficulty": "basic",
-    "stem": "Which nerve provides motor innervation to the diaphragm?",
-    "options": ["Intercostal nerves", "Vagus nerve", "Phrenic nerve", "Subcostal nerve"],
-    "answer_index": 2
-  },
-  {
-    "id": "acem_prim_anat_0066",
-    "exam": "ACEM Primary",
-    "domain": "Anatomy",
-    "topic": "Thorax - Diaphragm Openings",
-    "format": "MCQ_SBA",
-    "difficulty": "basic",
-    "stem": "At what vertebral level does the oesophagus pass through the diaphragm?",
-    "options": ["T8", "T10", "T12", "L1"],
-    "answer_index": 1
-  },
-  {
-    "id": "acem_prim_anat_0067",
-    "exam": "ACEM Primary",
-    "domain": "Anatomy",
-    "topic": "Thorax - Lungs",
-    "format": "MCQ_SBA",
-    "difficulty": "basic",
-    "stem": "The oblique fissure of the left lung lies approximately along which rib level posteriorly?",
-    "options": ["2nd", "4th", "6th", "T3 spinous process to 6th rib anteriorly"],
-    "answer_index": 3
-  },
-  {
-    "id": "acem_prim_anat_0068",
-    "exam": "ACEM Primary",
-    "domain": "Anatomy",
-    "topic": "Thorax - Pleura",
-    "format": "MCQ_SBA",
-    "difficulty": "basic",
-    "stem": "The costodiaphragmatic recess extends to which rib level in the midaxillary line?",
-    "options": ["6th", "8th", "10th", "12th"],
-    "answer_index": 2
-  },
-  {
-    "id": "acem_prim_anat_0069",
-    "exam": "ACEM Primary",
-    "domain": "Anatomy",
-    "topic": "Thorax - Mediastinum",
+    "topic": "Neuroanatomy – Vessels",
     "format": "MCQ_SBA",
     "difficulty": "applied",
-    "stem": "Which structure is located in the posterior mediastinum?",
-    "options": ["Thymus", "Ascending aorta", "Thoracic duct", "SVC"],
-    "answer_index": 2
+    "stem": "An epidural hematoma typically arises from laceration of which vessel?",
+    "options": [
+      "Middle meningeal artery",
+      "Bridging veins",
+      "Superior sagittal sinus",
+      "Internal carotid artery"
+    ],
+    "answer_index": 0,
+    "explanation": "Temporal bone fractures may tear the middle meningeal artery → biconvex extra‑dural bleed.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Meningeal vessels"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Meningeal vessels"
+      }
+    ]
   },
   {
-    "id": "acem_prim_anat_0070",
+    "id": "acem_prim_anat_0127",
     "exam": "ACEM Primary",
     "domain": "Anatomy",
-    "topic": "Abdomen - GI Tract",
+    "topic": "Head & Neck – Face",
     "format": "MCQ_SBA",
-    "difficulty": "basic",
-    "stem": "The second part of the duodenum receives the common bile duct and pancreatic duct at which structure?",
-    "options": ["Ampulla of Vater", "Pylorus", "Ligament of Treitz", "Cystic duct"],
-    "answer_index": 0
+    "difficulty": "applied",
+    "stem": "Injury to the marginal mandibular branch of the facial nerve causes weakness of:",
+    "options": [
+      "Eyebrow elevation",
+      "Forehead wrinkling",
+      "Lower lip depression",
+      "Eye closure"
+    ],
+    "answer_index": 2,
+    "explanation": "The marginal mandibular branch supplies muscles depressing the lower lip.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Facial nerve branches"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Facial nerve branches"
+      }
+    ]
   },
   {
-    "id": "acem_prim_anat_0071",
+    "id": "acem_prim_anat_0128",
     "exam": "ACEM Primary",
     "domain": "Anatomy",
-    "topic": "Abdomen - Mesenteric Supply",
+    "topic": "Orbit",
     "format": "MCQ_SBA",
-    "difficulty": "basic",
-    "stem": "The midgut is primarily supplied by which artery?",
-    "options": ["Coeliac trunk", "Superior mesenteric artery", "Inferior mesenteric artery", "Internal iliac artery"],
-    "answer_index": 1
+    "difficulty": "applied",
+    "stem": "A lesion of the right oculomotor nerve would most likely cause which finding?",
+    "options": [
+      "Impaired abduction of right eye",
+      "Ptosis and dilated pupil on right",
+      "Impaired adduction of left eye",
+      "Miosis on right"
+    ],
+    "answer_index": 1,
+    "explanation": "CN III palsy → ptosis (levator), ‘down and out’ eye, and mydriasis (parasympathetic).",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Orbit/cranial nerves"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Orbit/cranial nerves"
+      }
+    ]
   },
   {
-    "id": "acem_prim_anat_0072",
+    "id": "acem_prim_anat_0129",
     "exam": "ACEM Primary",
     "domain": "Anatomy",
-    "topic": "Abdomen - Mesenteric Supply",
+    "topic": "Pelvis & Perineum",
     "format": "MCQ_SBA",
-    "difficulty": "basic",
-    "stem": "The foregut is derived from structures supplied by which artery?",
-    "options": ["Superior mesenteric artery", "Coeliac trunk", "Inferior mesenteric artery", "Renal artery"],
-    "answer_index": 1
+    "difficulty": "applied",
+    "stem": "The pudendal nerve exits the pelvis via the greater sciatic foramen and re‑enters via the lesser sciatic foramen to reach:",
+    "options": [
+      "Obturator canal",
+      "Pudendal (Alcock’s) canal",
+      "Femoral canal",
+      "Inguinal canal"
+    ],
+    "answer_index": 1,
+    "explanation": "Pudendal nerve enters Alcock’s canal on the lateral wall of the ischioanal fossa.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Pelvis/perineum"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Pelvis/perineum"
+      }
+    ]
   },
   {
-    "id": "acem_prim_anat_0073",
+    "id": "acem_prim_anat_0130",
     "exam": "ACEM Primary",
     "domain": "Anatomy",
-    "topic": "Abdomen - Venous Drainage",
+    "topic": "Pelvis & Perineum",
     "format": "MCQ_SBA",
-    "difficulty": "basic",
-    "stem": "The portal vein is formed by the union of which two veins?",
-    "options": ["Splenic and superior mesenteric veins", "Splenic and renal veins", "Inferior and superior mesenteric veins", "Hepatic and splenic veins"],
-    "answer_index": 0
+    "difficulty": "applied",
+    "stem": "Which structure forms the anterior boundary of the perineal membrane’s urogenital hiatus?",
+    "options": [
+      "Perineal body",
+      "Pubic symphysis/arch",
+      "Ischial tuberosity",
+      "Coccyx"
+    ],
+    "answer_index": 1,
+    "explanation": "The urogenital hiatus opens anteriorly beneath the pubic arch; perineal body is posterior midline tendon.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Perineum"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Perineum"
+      }
+    ]
   },
   {
-    "id": "acem_prim_anat_0074
-
-     
+    "id": "acem_prim_anat_0131",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Pelvis & Perineum",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "Rupture of the spongy urethra with Buck’s fascia torn allows urine to spread to:",
+    "options": [
+      "Ischioanal fossa",
+      "Anterior abdominal wall (superficial pouch)",
+      "Pelvic cavity",
+      "Gluteal region"
+    ],
+    "answer_index": 1,
+    "explanation": "Urine can track into the superficial perineal space and up the lower anterior abdominal wall deep to Scarpa’s fascia.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Perineum/abdominal wall"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Perineum/abdominal wall"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0132",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Back & Spine",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "Compression of the L5 nerve root typically produces weakness of which movement?",
+    "options": [
+      "Knee extension",
+      "Ankle plantarflexion",
+      "Ankle dorsiflexion (toe/heel walking)",
+      "Hip adduction"
+    ],
+    "answer_index": 2,
+    "explanation": "L5 root innervates dorsiflexors (deep peroneal); patients struggle with heel walking.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Lumbar spine dermatomes/myotomes"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Lumbar spine dermatomes/myotomes"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0133",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Back & Spine",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "Which ligament prevents hyperflexion of the vertebral column?",
+    "options": [
+      "Anterior longitudinal ligament",
+      "Posterior longitudinal ligament",
+      "Ligamentum flavum",
+      "Interspinous ligament"
+    ],
+    "answer_index": 3,
+    "explanation": "Interspinous and supraspinous ligaments resist flexion; ALL resists extension.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Spinal ligaments"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Spinal ligaments"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0134",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Back & Spine",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "The conus medullaris typically ends at which vertebral level in adults?",
+    "options": [
+      "T12",
+      "L1–L2",
+      "L3–L4",
+      "S1"
+    ],
+    "answer_index": 1,
+    "explanation": "Adult spinal cord ends around L1–L2; cauda equina continues below.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Spinal cord levels"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Spinal cord levels"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0135",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Embryology (Clinical)",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "A Meckel’s diverticulum is a remnant of which embryologic structure?",
+    "options": [
+      "Urachus",
+      "Vitelline (omphalomesenteric) duct",
+      "Allantois",
+      "Müllerian duct"
+    ],
+    "answer_index": 1,
+    "explanation": "Meckel’s diverticulum results from persistence of the vitelline duct on the antimesenteric ileum.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "GIT development"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "GIT development"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0136",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Surface/Procedural Anatomy",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "The safe triangle for chest drain insertion is bounded by the latissimus dorsi, pectoralis major, a line superior to the nipple level, and:",
+    "options": [
+      "Midline",
+      "Anterior border of trapezius",
+      "Fifth intercostal space mid‑axillary line",
+      "Base of axilla"
+    ],
+    "answer_index": 2,
+    "explanation": "Safe triangle: anterior to latissimus, lateral to pec major, above level of nipple (5th ICS), apex at axilla.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Thoracic wall – procedures"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Thoracic wall – procedures"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0137",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Surface/Procedural Anatomy",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "During cricothyrotomy, the membrane pierced is between which cartilages?",
+    "options": [
+      "Thyroid and cricoid",
+      "Cricoid and tracheal ring 1",
+      "Hyoid and thyroid",
+      "Arytenoid and cricoid"
+    ],
+    "answer_index": 0,
+    "explanation": "Cricothyroid membrane spans between thyroid cartilage and cricoid arch.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Airway anatomy"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Airway anatomy"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0138",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Thorax – Pleura",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "A chest tube placed too inferiorly at the mid‑axillary line risks penetrating which organ on the right?",
+    "options": [
+      "Spleen",
+      "Liver",
+      "Stomach",
+      "Right kidney"
+    ],
+    "answer_index": 1,
+    "explanation": "Low placement below 5th ICS may injure the liver on the right (or spleen on the left).",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Thoracic wall/diaphragm"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Thoracic wall/diaphragm"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0139",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Neuroanatomy – Cranial Fossae",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "The foramen ovale transmits which structure?",
+    "options": [
+      "Maxillary nerve (V2)",
+      "Mandibular nerve (V3)",
+      "Internal carotid artery",
+      "Glossopharyngeal nerve"
+    ],
+    "answer_index": 1,
+    "explanation": "Foramen ovale: V3; rotundum: V2; spinosum: middle meningeal artery; lacerum: cartilage/ICA over.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Cranial base foramina"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Cranial base foramina"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0140",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Neuroanatomy – Pathways",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "Loss of vibration and proprioception on the right below T6 suggests a lesion of which tract?",
+    "options": [
+      "Right dorsal column (gracile fasciculus)",
+      "Left dorsal column (gracile fasciculus)",
+      "Right spinothalamic tract",
+      "Left spinothalamic tract"
+    ],
+    "answer_index": 0,
+    "explanation": "Dorsal column modalities ascend ipsilaterally; gracile tract carries lower limb proprioception.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Spinal tracts"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Spinal tracts"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0141",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Head & Neck – Carotid",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "Carotid sinus baroreceptors are innervated primarily by:",
+    "options": [
+      "Glossopharyngeal nerve (IX)",
+      "Vagus nerve (X)",
+      "Sympathetic chain",
+      "Facial nerve (VII)"
+    ],
+    "answer_index": 0,
+    "explanation": "Carotid sinus via Hering’s nerve (IX); aortic arch via vagus (X).",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Neck vessels"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Neck vessels"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0142",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Abdomen – Hernias",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "An indirect inguinal hernia passes:",
+    "options": [
+      "Medial to inferior epigastric vessels via Hesselbach’s triangle",
+      "Lateral to inferior epigastric vessels via deep ring",
+      "Through femoral canal medial to lacunar ligament",
+      "Directly through transversalis fascia above arcuate line"
+    ],
+    "answer_index": 1,
+    "explanation": "Indirect hernia enters deep inguinal ring lateral to inferior epigastrics and may traverse the canal.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Inguinal region"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Inguinal region"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0143",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Lower Limb – Knee",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "Pain and swelling over the tibial tuberosity in an adolescent athlete most likely indicates:",
+    "options": [
+      "Sever disease",
+      "Osgood–Schlatter disease",
+      "Sinding‑Larsen‑Johansson",
+      "Baker cyst"
+    ],
+    "answer_index": 1,
+    "explanation": "Osgood–Schlatter: traction apophysitis of tibial tuberosity from repetitive quadriceps pull.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Knee/extensor mechanism"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Knee/extensor mechanism"
+      }
+    ]
+  },
+  {
+    "id": "acem_prim_anat_0144",
+    "exam": "ACEM Primary",
+    "domain": "Anatomy",
+    "topic": "Upper Limb – Elbow",
+    "format": "MCQ_SBA",
+    "difficulty": "applied",
+    "stem": "Cubital tunnel syndrome results from compression of which nerve at the elbow?",
+    "options": [
+      "Median",
+      "Radial",
+      "Ulnar",
+      "Anterior interosseous"
+    ],
+    "answer_index": 2,
+    "explanation": "Ulnar nerve compression in the cubital tunnel causes paresthesia in ulnar digits and intrinsic weakness.",
+    "sources": [
+      {
+        "title": "Clinically Oriented Anatomy (Moore & Dalley)",
+        "loc": "Elbow/ulnar nerve"
+      },
+      {
+        "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy",
+        "loc": "Elbow/ulnar nerve"
+      }
+    ]
+  }
+]
