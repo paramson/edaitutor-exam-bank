@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EDAI Tutor Exam Bank</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #f4f6f8;
+      color: #222;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      padding: 2.5rem 1rem;
+    }
+    h1 { margin-bottom: 0.5rem; font-size: 2.2rem; }
+    p { margin-top: 0; font-size: 1.1rem; opacity: 0.9; }
+
+    main { padding: 2rem 1rem; }
+    label { display: block; margin-top: 1.5rem; font-weight: 600; }
+    select {
+      margin-top: 0.5rem;
+      padding: 0.6rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      width: 220px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 1.5rem;
+      padding: 0.9rem 1.8rem;
+      border-radius: 8px;
+      background-color: #2a5298;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .btn:hover { background-color: #1e3c72; }
+
+    footer {
+      background: #1e1e1e;
+      color: #aaa;
+      font-size: 0.9rem;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+  <script>
+    function startExam() {
+      const domain = document.getElementById("domain").value;
+      const difficulty = document.getElementById("difficulty").value;
+      const url = `exam.html?domain=${encodeURIComponent(domain)}&difficulty=${encodeURIComponent(difficulty)}`;
+      window.location.href = url;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>EDAI Tutor Exam Bank</h1>
+    <p>ACEM / RCEM / RNZCUC / Associateship Mock Exams</p>
+  </header>
+
+  <main>
+    <p>Welcome to the interactive exam bank for Emergency Medicine trainees.<br>
+    Select your preferences and begin your practice session.</p>
+
+    <label for="domain">Choose Domain:</label>
+    <select id="domain">
+      <option value="All">All</option>
+      <option value="Physiology">Physiology</option>
+      <option value="Pathology">Pathology</option>
+      <option value="Pharmacology">Pharmacology</option>
+      <option value="Anatomy">Anatomy</option>
+      <option value="Clinical Management">Clinical Management</option>
+      <option value="Resuscitation & Decision Making">Resuscitation & Decision Making</option>
+    </select>
+
+    <label for="difficulty">Select Difficulty:</label>
+    <select id="difficulty">
+      <option value="all">All</option>
+      <option value="basic">Basic</option>
+      <option value="applied">Applied</option>
+      <option value="advanced">Advanced</option>
+    </select>
+
+    <div>
+      <button class="btn" onclick="startExam()">🧠 Start Exam</button>
+      <a class="btn" href="questions_bank.json">📘 View Question Bank</a>
+      <a class="btn" href="https://edaitutor.org">🧩 Back to EDAI Tutor</a>
+    </div>
+  </main>
+
+  <footer>
+    Created by Nish Paramsothy — ED AI Tutor Project © 2025
+  </footer>
+</body>
+</html>
