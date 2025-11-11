@@ -66,7 +66,9 @@
     const domainFilter = urlParams.get('domain') || 'All';
     const difficultyFilter = urlParams.get('difficulty') || 'All';
 
-    const QUESTIONS_URL = "https://paramson.github.io/edaitutor-exam-bank/questions_bank.json";
+    // ✅ Fixed working GitHub RAW JSON link
+    const QUESTIONS_URL = "https://raw.githubusercontent.com/paramson/edaitutor-exam-bank/refs/heads/main/questions_bank.json";
+
     let allQuestions = [];
     let filtered = [];
     let offset = 0;
@@ -85,7 +87,7 @@
       } catch (err) {
         console.error("Error loading questions:", err);
         document.getElementById("questions-container").innerHTML =
-          "<p class='text-danger'>Failed to load questions. Please check your connection or data file.</p>";
+          "<p class='text-danger text-center'>⚠️ Failed to load questions. Please check your connection or data file.</p>";
       }
     }
 
@@ -144,10 +146,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
