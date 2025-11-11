@@ -1,41 +1,32 @@
-[
-  {
-    "id": "acem_prim_phys_0001",
-    "short_answer": "Functional Residual Capacity (FRC) is the lung volume at the end of passive expiration. It reflects the equilibrium between inward elastic recoil of the lungs and outward recoil of the chest wall. Changes in compliance, posture, or diaphragmatic tone can shift FRC.",
-    "references": [
-      { "group": "Textbook", "title": "West's Respiratory Physiology, 10th ed.", "chapter": "Mechanics of Breathing" },
-      { "group": "Textbook", "title": "Ganong’s Review of Medical Physiology, 26th ed.", "chapter": "Pulmonary Volumes" },
-      { "group": "FOAMed", "title": "LITFL – Functional Residual Capacity", "url": "https://litfl.com/functional-residual-capacity/" },
-      { "group": "Guideline", "title": "RCH Clinical Guideline – Asthma", "url": "https://www.rch.org.au/clinicalguide/guideline_index/Asthma/" }
+{
+  "acem_prim_phys_0001": {
+    "text": "FRC is determined by the balance of outward chest wall recoil and inward lung recoil. In healthy adults, <b>lung elastic recoil</b> primarily sets FRC.",
+    "sources": [
+      { "title": "LITFL – Functional Residual Capacity", "url": "https://litfl.com/functional-residual-capacity/" },
+      { "title": "EMCrit – Pulmonary Physiology", "url": "https://emcrit.org/ibcc/respiratory-physiology/" }
     ]
   },
-  {
-    "id": "acem_prim_path_0001",
-    "short_answer": "Apoptosis is an organised, energy-dependent process of cell death without inflammation. It features cell shrinkage, chromatin condensation, and DNA fragmentation into nucleosomal ladders. Necrosis, in contrast, involves loss of membrane integrity and an inflammatory response.",
-    "references": [
-      { "group": "Textbook", "title": "Robbins & Cotran Pathologic Basis of Disease, 10th ed.", "chapter": "Cell Injury, Cell Death, and Adaptations" },
-      { "group": "FOAMed", "title": "Pathology Made Simple – Apoptosis vs Necrosis (LITFL)", "url": "https://litfl.com/apoptosis-vs-necrosis/" },
-      { "group": "Guideline", "title": "NICE – Cellular Pathology Overview", "url": "https://www.nice.org.uk/" }
+  "acem_prim_path_0001": {
+    "text": "Apoptosis features <b>DNA fragmentation into nucleosomal ladders</b> and no inflammation. Necrosis causes swelling and membrane rupture.",
+    "sources": [
+      { "title": "Don't Forget The Bubbles – Cell Death", "url": "https://dontforgetthebubbles.com/" },
+      { "title": "NICE – Pathophysiology Overview", "url": "https://www.nice.org.uk/" }
     ]
   },
-  {
-    "id": "acem_prim_pharm_0001",
-    "short_answer": "The elimination half-life (t½) is determined by the drug’s volume of distribution and clearance: t½ = 0.693 × Vd / CL. A large Vd or reduced clearance prolongs half-life. Understanding this guides dosing intervals and steady-state estimation.",
-    "references": [
-      { "group": "Textbook", "title": "Katzung – Basic and Clinical Pharmacology, 12th ed.", "chapter": "Pharmacokinetics" },
-      { "group": "Textbook", "title": "Goodman & Gilman – The Pharmacological Basis of Therapeutics, 13th ed.", "chapter": "Pharmacokinetics and Pharmacodynamics" },
-      { "group": "FOAMed", "title": "EMCrit – Drug Pharmacokinetics in Critical Care", "url": "https://emcrit.org/pulmcrit/pharmacokinetics/" },
-      { "group": "Guideline", "title": "Australian eTG – Prescribing Principles", "url": "https://www.tg.org.au/" }
+  "acem_prim_pharm_0001": {
+    "text": "Half-life (t½) ≈ 0.693 × Vd / CL. For Vd 40 L and CL 4 L/h → t½ ≈ 6.9 h.",
+    "sources": [
+      { "title": "CoreEM – Pharmacokinetics", "url": "https://coreem.net/core/pharmacokinetics/" },
+      { "title": "TheNNT – Clinical Calculations", "url": "https://thennt.com/" }
     ]
   },
-  {
-    "id": "acem_prim_anat_0001",
-    "short_answer": "A spiral fracture of the humeral shaft endangers the radial nerve, which traverses the spiral groove posteriorly with the profunda brachii artery. Injury results in wrist-drop and sensory loss over the dorsum of the hand.",
-    "references": [
-      { "group": "Textbook", "title": "Clinically Oriented Anatomy (Moore et al.), 8th ed.", "chapter": "Arm and Forearm" },
-      { "group": "Atlas", "title": "Abrahams & McMinn’s Clinical Atlas of Human Anatomy, 8th ed.", "section": "Upper Limb – Radial Nerve" },
-      { "group": "FOAMed", "title": "Orthobullets – Humeral Shaft Fracture", "url": "https://www.orthobullets.com/trauma/1016/humeral-shaft-fractures" },
-      { "group": "Guideline", "title": "ACI NSW Musculoskeletal Pathway", "url": "https://aci.health.nsw.gov.au/" }
+  "acem_prim_anat_0001": {
+    "text": "The <b>radial nerve</b> winds around the humerus in the spiral groove and is vulnerable in humeral shaft fractures.",
+    "sources": [
+      { "title": "Orthobullets – Radial Nerve Injury", "url": "https://www.orthobullets.com/" },
+      { "title": "Emergency Medicine Ireland – Anatomy & EM", "url": "https://emergencymedicineireland.com/anatomy-and-em/" }
     ]
   }
-]
+}
+
+
